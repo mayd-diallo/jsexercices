@@ -38,3 +38,18 @@ fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
   .catch((error) => {
     console.error("Erreur lors de la récupération ou du parsing :", error);
   });
+  function rechercheMaxAttack(_data){
+    let carteMaxAttack = _data[0];
+    let valuelueMaxAttack= _data[0].attack;
+    for (let i =1; i<_data.length; i++) {
+      if (_data[i].attack > valuelueMaxAttack) {
+        valuelueMaxAttack = _data[i].attack ;
+        carteMaxAttack = _data[i];
+      }
+    }
+    return carteMaxAttack;
+    function searchMaxattackTri (_data) {
+      const tabDecroissant =_data.sort((a, b)=>b.attack-a.attack);
+      return tabDecroissant[0];
+    }
+  }
