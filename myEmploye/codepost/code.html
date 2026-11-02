@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Recherche de villes</title>
+    <link rel="stylesheet" href="code.css">
+    <script src="code.js" defer></script>
+</head>
+<body>
+
+    <h1>Recherche de villes / codes postaux</h1>
+
+    <form id="searchForm">
+        <input
+            type="search"
+            id="search"
+            list="suggestions"
+            placeholder="Saisir un code postal"
+        >
+
+        <datalist id="suggestions"></datalist>
+
+        <button type="submit">
+            Rechercher
+        </button>
+    </form>
+
+    <div id="result"></div>
+
+    
+
+</body>
+</html>
